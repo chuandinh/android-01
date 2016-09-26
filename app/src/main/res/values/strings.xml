@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">What"'"s for Dinner</string>
+    <string name="meals_title">Meals</string>
+    <string name="recipes_title">Recipes</string>
+    <string name="groceries_title">Grocery Shopping</string>
+    <string name="new_recipe_title">New Dish</string>
+    <string name="recipe_detail_title">Recipe Detail</string>
+    <string name="nutrition_title">Nutrition Manager</string>
+
+    <string name="eating_out">Eating out</string>
+
+    <string name="radio_breakfast">Breakfast</string>
+    <string name="radio_lunch">Lunch</string>
+    <string name="radio_dinner">Dinner</string>
+
+    <string name="about_dialog">\nVersion 1.0\n\nCopyright (c) 2016 \nby Chuan Dinh\n\n\nwww.mywebsite.com</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="array_days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+</resources>

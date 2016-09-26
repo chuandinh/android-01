@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textViewDay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="Monday"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breakfast: "
+        android:id="@+id/textViewBreakfastTitle"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/textViewDay" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eating_out"
+        android:id="@+id/textViewBreakFast"
+        android:layout_below="@+id/textViewDay"
+        android:layout_toRightOf="@+id/textViewBreakfastTitle"
+        android:layout_toEndOf="@+id/textViewBreakfastTitle"
+        android:singleLine="false" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunch: "
+        android:id="@+id/textViewLunchTitle"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/textViewBreakfastTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eating_out"
+        android:id="@+id/textViewLunch"
+        android:layout_below="@+id/textViewBreakfastTitle"
+        android:singleLine="false"
+        android:layout_alignLeft="@+id/textViewBreakFast" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dinner: "
+        android:id="@+id/textViewDinnerTitle"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/textViewLunchTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eating_out"
+        android:id="@+id/textViewDinner"
+        android:layout_below="@+id/textViewLunch"
+        android:singleLine="false"
+        android:layout_alignLeft="@+id/textViewLunch" />
+</RelativeLayout>

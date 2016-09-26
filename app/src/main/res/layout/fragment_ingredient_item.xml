@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeightLarge" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ingredient_layout_front"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ingredient_item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceListItem"
+            />
+
+        <TextView
+            android:id="@+id/ingredient_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ingredient_layout_back"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingLeft="0dp"
+        android:paddingRight="5dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/ingredient_item_contentEdit"
+            android:text="testing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wipeButtoneAdd"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/btn_plus"
+            android:maxHeight="10dp"
+            android:maxWidth="10dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wipeButtonRemove"
+            android:src="@drawable/btn_minus"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/wipeButtoneAdd"
+            android:layout_toStartOf="@+id/wipeButtoneAdd" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+
+

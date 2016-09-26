@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:id="@+id/newRecipeContainer"
+    tools:context="com.example.dinh.whatsfordinner.NewRecipeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recipeNameEditText"
+                android:hint="Enter Recipe Name"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/recipeImageView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:maxHeight="150dp"
+                    android:maxWidth="150dp"
+                    android:src="@drawable/recipe_default" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButtonAddImage"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_input_add"
+                    android:onClick="onAddRecipeImage"
+                    android:layout_marginRight="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Ingredients"
+                    android:id="@+id/textViewIngredients"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp" />
+
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButtonAddIngredient"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_input_add"
+                    android:onClick="onAddIngredient"
+                    android:layout_marginRight="10dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ingredientsContainer"
+                android:orientation="vertical"
+                >
+                <Spinner
+                    android:background="#bcdeab"
+                    android:spinnerMode="dropdown"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerItem1"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Directions"
+                android:id="@+id/textViewDirections"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+            </TextView>
+            <EditText
+                android:inputType="textMultiLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="255"
+                android:id="@+id/directionsEditText"
+                android:hint="Enter directions"
+                android:layout_centerHorizontal="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nutrition"
+                android:id="@+id/textView"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Calories"
+                    android:id="@+id/textViewCalories" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Carbohydrates"
+                    android:id="@+id/textViewCarbohydrates"
+                    android:layout_below="@+id/editTextCalories" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Minerals"
+                    android:id="@+id/textViewMinerals"
+                    android:layout_below="@+id/editTextCarbohydrates" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Vitamins"
+                    android:id="@+id/textViewVitamins"
+                    android:layout_below="@+id/editTextMinerals" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Sugar"
+                    android:id="@+id/textViewSugar"
+                    android:layout_below="@+id/editTextVitamins" />
+
+                <EditText
+                    android:inputType="number"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="K"
+                    android:id="@+id/editTextCalories"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="g"
+                    android:id="@+id/editTextCarbohydrates"
+                    android:layout_below="@+id/editTextCalories"
+                    android:layout_alignLeft="@+id/editTextCalories" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="g"
+                    android:id="@+id/editTextMinerals"
+                    android:layout_below="@+id/editTextCarbohydrates"
+                    android:layout_alignLeft="@+id/editTextCarbohydrates" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="g"
+                    android:id="@+id/editTextVitamins"
+                    android:layout_below="@+id/editTextMinerals"
+                    android:layout_alignLeft="@+id/editTextMinerals" />
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="g"
+                    android:id="@+id/editTextSugar"
+                    android:layout_below="@+id/editTextVitamins"
+                    android:layout_alignLeft="@+id/editTextVitamins" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/saveButton"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onSaveClicked" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
